@@ -22,6 +22,7 @@ body {
     padding-inline-start: 20rem;
     color: white;
     float: right;
+    padding-inline-start: 20rem;
 }
 
 nav {
@@ -30,16 +31,20 @@ nav {
     top: 0;
     bottom: 0;
     right: 0;
-    float: left;
-    padding-block: 2rem;
+     float: left; 
+     padding-block: 2rem; 
+    padding-left: 0;
+    padding-right: 3rem;
+    
 }
 
 .nav-list {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: grid;
+    display: grid;    
     gap: 1rem;
+    left: 1rem;
 }
 
 .nav-list a {
@@ -51,9 +56,11 @@ nav {
 .nav-list li {
     padding-block: 1rem;
     padding-inline: 2rem;
-    margin-inline: 1rem 0;
+    margin-inline: 0 ;
     /* prevent animation glitch on right side */
-    box-shadow: 2px 0 0 var(--body-bg);
+    box-shadow: 0 0 0  var(--body-bg);
+
+  
 }
 
 .nav-list li.active {
@@ -63,7 +70,7 @@ nav {
     position: relative;
     z-index: -1;
     border-radius: 0 100vw 100vw 0;
-
+   
 }
 
 ::view-transition-group(nav) {
@@ -74,30 +81,27 @@ nav {
 .nav-list li.active::after {
     --border-radius: 1rem;
     content: "";
-    position: absolute;
-    padding-left: ;
-    width:  var(--border-radius); 
-    height: var(--border-radius);
-    right: 0rem;
-    left: 0rem;
-
+    position: absolute;       
+    width:  var(--border-radius);  
+    height: var(--border-radius); 
+    right: 0rem; 
+    left: 0rem;   
     background: var(--nav-bg);
-    background: red; 
-    
+    background: red;
 }
 
 .nav-list li.active::before {
-    border-radius: 0 0 var(--border-radius);
+    border-radius: 0 0 0 var(--border-radius)  ;
     top: calc(var(--border-radius) * -1);
-    box-shadow: 5px 5px 0 5px var(--body-bg);
+    box-shadow: 5px 5px 0 -5px var(--body-bg);
+  
     
 }
 
 .nav-list li.active::after {
-    border-radius: 0 var(--border-radius) 0 0;
-    bottom: calc(var(--border-radius) * -1);
-    box-shadow: 5px -5px 0 5px var(--body-bg);
-    
+    border-radius:  var(--border-radius) 0 0 0;
+    bottom: calc(var(--border-radius) *-1);
+    box-shadow: 5px 5px 0 -5px  var(--body-bg);    
     
 }
 
