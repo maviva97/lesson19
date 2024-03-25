@@ -87,21 +87,21 @@ nav {
     right: 0rem; 
     left: 0rem;   
     background: var(--nav-bg);
-    background: red;
+    /* background: red; */
 }
 
 .nav-list li.active::before {
-    border-radius: 0 0 0 var(--border-radius)  ;
+    border-radius: 0 0 0 50%  ;
     top: calc(var(--border-radius) * -1);
-    box-shadow: 5px 5px 0 -5px var(--body-bg);
+    box-shadow: -5px 5px 0 5px var(--body-bg);
   
     
 }
 
 .nav-list li.active::after {
-    border-radius:  var(--border-radius) 0 0 0;
+    border-radius:  50% 0 0 0;
     bottom: calc(var(--border-radius) *-1);
-    box-shadow: 5px 5px 0 -5px  var(--body-bg);    
+    box-shadow: -5px -5px 0 5px  var(--body-bg);    
     
 }
 
